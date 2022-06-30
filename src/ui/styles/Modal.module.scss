@@ -1,0 +1,214 @@
+.wrapperDefault {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.loading {
+  pointer-events: none !important;
+  opacity: 0.5 !important;
+}
+
+
+.content {
+  cursor: default;
+  background: white;
+  border-radius: 5px;
+  width: 450px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.slideInTop {
+  transition: transform 0.2s ease-in;
+  transform: translateY(-100%);
+
+  &.active {
+    transform: translateY(0);
+  }
+}
+
+.scaleCenter {
+  transition: transform 0.2s ease-in;
+  transform: scale(0);
+
+  &.active {
+    transform: scale(1);
+  }
+}
+
+
+.modalAddPack {
+
+  .addPackHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 1px;
+      background: #c2c3c9;
+      bottom: -15px;
+      left: -50%;
+    }
+
+    margin-bottom: 50px;
+
+
+    span {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+      color: #2D2E46;
+    }
+
+    .close {
+      cursor: pointer;
+    }
+  }
+
+  .addPackBtn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    button {
+      width: 125px;
+      background: #D7D8EF;
+      border: none;
+    }
+  }
+
+}
+
+.modalDeletePack {
+
+  .deleteDesc {
+    text-align: center;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .deletePackHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 1px;
+      background: #c2c3c9;
+      bottom: -15px;
+      left: -50%;
+    }
+
+    margin-bottom: 50px;
+
+
+    span {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+      color: #2D2E46;
+    }
+
+    .close {
+      cursor: pointer;
+    }
+  }
+
+  .deletePackBtn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    button {
+      width: 125px;
+      background: #D7D8EF;
+      border: none;
+    }
+
+
+  }
+
+}
+
+.delete {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 14px;
+  height: 24px;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background: #F1453D;
+  color: white;
+  padding: 0 7px;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+
+  &:hover {
+    background: #21268F;
+    color: #D7D8EF;
+  }
+
+}
+
+.inputWrap {
+  position: relative;
+
+  .errorMes {
+    position: absolute;
+    top: -10px;
+    font-size: 16px;
+    width: 100%;
+    color: #fa4325;
+    text-align: center;
+  }
+}
+
+.btnEdit {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 14px;
+  height: 24px;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background: #D7D8EF;
+  color: #21268F;
+  padding: 0 7px;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  margin: 0 4px;
+  
+  &:hover {
+    background: #21268F;
+    color: #D7D8EF;
+  }
+}

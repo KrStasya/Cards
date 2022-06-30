@@ -1,0 +1,63 @@
+{
+  "name": "Mr.Gentleman",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://mr-g3ntl3man.github.io/Friday/",
+  "dependencies": {
+    "@hookform/resolvers": "^2.8.5",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/gh-pages": "^3.2.0",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^16.11.19",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "@types/react-paginate": "^7.1.1",
+    "@types/react-redux": "^7.1.21",
+    "axios": "^0.24.0",
+    "gh-pages": "^3.2.3",
+    "node-sass": "6.0",
+    "rc-slider": "^9.7.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.23.0",
+    "react-paginate": "^8.1.0",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "5.0.0",
+    "react-simple-star-rating": "^4.0.5",
+    "react-svg": "^14.1.7",
+    "redux": "^4.1.2",
+    "redux-thunk": "^2.4.1",
+    "typescript": "^4.5.4",
+    "web-vitals": "^2.1.2",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

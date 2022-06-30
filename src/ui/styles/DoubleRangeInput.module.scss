@@ -1,0 +1,108 @@
+.container {
+
+}
+
+.slider {
+  position: relative;
+  width: 200px;
+}
+
+.sliderTrack,
+.sliderRange,
+.sliderLeftValue,
+.sliderRightValue {
+  position: absolute;
+}
+
+.sliderTrack,
+.sliderRange {
+  border-radius: 3px;
+  height: 5px;
+}
+
+.sliderTrack {
+  background-color: #9A91C8;
+  margin-left: 2px;
+  width: 100%;
+  z-index: 1;
+}
+
+.sliderRange {
+  background-color: #21268F;
+  z-index: 2;
+}
+
+.sliderLeftValue,
+.sliderRightValue {
+  color: #dee2e6;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.sliderLeftValue {
+
+}
+
+.sliderRightValue {
+  right: -2px;
+}
+
+/* Removing the default appearance */
+.thumb,
+.thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.thumb {
+  pointer-events: none;
+  position: absolute;
+  height: 0;
+  width: 200px;
+  outline: none;
+}
+
+.thumbLeft {
+  z-index: 3;
+}
+
+.thumbRight {
+  z-index: 4;
+}
+
+/* For Chrome browsers */
+.thumb::-webkit-slider-thumb {
+  background: #FFFFFF;
+  border: 4px solid #21268F;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  margin-top: 4px;
+  pointer-events: all;
+  position: relative;
+}
+
+/* For Firefox browsers */
+.thumb::-moz-range-thumb {
+  background-color: #f1f5f7;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px #ced4da;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  margin-top: 4px;
+  pointer-events: all;
+  position: relative;
+}
+
+.defaultStyle {
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 4px 11px;
+  background: #21268F;
+  border-radius: 3px;
+  top: 0;
+}

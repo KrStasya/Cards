@@ -1,0 +1,109 @@
+.defaultBtn {
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, opacity 0.3s ease-in-out;
+  letter-spacing: 1px;
+  width: 100%;
+  min-width: 50px;
+  background: #c8c9ec;
+  border-radius: 30px;
+  color: #2D2E46;
+  font-weight: 500;
+  overflow: hidden;
+  height: 36px;
+  opacity: 1;
+
+  &:disabled {
+    border: none;
+
+    &:hover {
+      color: #2D2E46;
+      transition: none;
+      border: none;
+    }
+  }
+
+  &:hover {
+    color: white;
+  }
+}
+
+.defaultBtn:before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  right: 50%;
+  bottom: -1px;
+  opacity: 0;
+  background-color: #21268F;
+  transition: left 0.3s ease-in-out, right 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.defaultBtn:disabled:before {
+  left: -1px;
+  right: -1px;
+  opacity: 1;
+  z-index: -1;
+  background-color: lightgray;
+}
+
+.defaultBtn:hover:before {
+  left: -1px;
+  right: -1px;
+  opacity: 1;
+  z-index: -1;
+  transition: left 0.3s ease-in-out, right 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.red {
+  border: 2px solid #F1453D;
+  cursor: pointer;
+  font-size: 17px;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border 0.3s ease-in-out;
+  letter-spacing: 1px;
+  width: 100%;
+  min-width: 50px;
+  background: transparent;
+  border-radius: 30px;
+  color: #2D2E46;
+  font-weight: 500;
+  overflow: hidden;
+  height: 36px;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.red:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  background: #F1453D;
+  transition: left 0.3s ease-in-out, right 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.red:hover:before {
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+  transition: left 0.3s ease-in-out, right 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

@@ -1,0 +1,21 @@
+.wrap {
+  position: relative;
+}
+
+.minRange, .maxRange {
+  background: #21268F;
+  border-radius: 3px;
+  padding: 0 10px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.minRange {
+
+}
+
+.wrapValue {
+  margin-top: 7px;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,93 @@
+.inputWrap {
+  position: relative;
+}
+
+.standard {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #777777;
+  transition: border 0.2s ease-in-out;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 10px;
+  width: 100%;
+  font-weight: 400;
+
+  &:hover {
+    border-bottom: 2px solid #0097d9;
+  }
+
+}
+
+.standardLabel {
+  position: absolute;
+  left: 0;
+  top: 49%;
+  transform: translateY(-50%);
+  line-height: 16px;
+  background-color: white;
+  color: #363636;
+  font-size: 16px;
+  transition: color 0.1s linear, top 0.1s linear, font-size 0.1s linear, left 0.1s linear;
+  pointer-events: none;
+}
+
+.standard:focus {
+  border-bottom: 2px solid #0097d9;
+}
+
+.standard:focus ~ .standardLabel,
+.standard:not(:placeholder-shown) ~ .standardLabel {
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  z-index: 10;
+}
+
+
+.outlined {
+  outline: none;
+  transition: border 0.2s ease-in-out;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 10px;
+  width: 100%;
+  font-weight: 400;
+  background: #ECECF9;
+  opacity: 0.5;
+  border: 1px solid #635D80;
+  border-radius: 2px;
+
+  &:hover {
+    border: 1px solid #0097d9;
+  }
+}
+
+.outlinedLabel {
+  position: absolute;
+  left: 15px;
+  top: 49%;
+  transform: translateY(-50%);
+  line-height: 16px;
+  color: #2D2E46;
+  background-color: transparent;
+  font-size: 16px;
+  transition: color 0.1s linear, top 0.1s linear, font-size 0.1s linear, left 0.1s linear;
+  pointer-events: none;
+}
+
+.outlined:focus {
+  border: 1px solid #0097d9;
+}
+
+.outlined:focus ~ .outlinedLabel,
+.outlined:not(:placeholder-shown) ~ .outlinedLabel {
+  top: 0;
+  left: 5px;
+  font-size: 14px;
+  z-index: 10;
+}
+
+
+

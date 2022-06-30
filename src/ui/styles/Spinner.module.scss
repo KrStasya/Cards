@@ -1,0 +1,34 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 30%);
+  z-index: 10;
+  width: 200px;
+  height: 200px;
+}
+
+
+.spinner svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.center {
+  height: 100vh;
+  left: 0;
+  top: 0;
+
+  .spinner {
+    transform: translate(-50%, -50%);
+  }
+}
