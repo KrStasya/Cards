@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://mr-g3ntl3man.github.io/Friday/",
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@hookform/resolvers": "^2.8.5",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",

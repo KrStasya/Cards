@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useState} from 'react';
 import styles from '../../styles/Form.module.scss'
 import {Button} from "../common/Button";
 import {Input} from "../common/Input";
@@ -8,17 +8,25 @@ import {SubmitHandler, useForm} from "react-hook-form";
 import * as yup from 'yup';
 import {yupResolver} from "@hookform/resolvers/yup";
 import {useAppSelector} from "../../../bll/store";
-import {authStatuses, firstFetchMe, loginUserData} from "../../../bll/auth-reducer";
+import {authStatuses, loginUserData} from "../../../bll/auth-reducer";
 import {useDispatch} from "react-redux";
 import {Spinner} from "../common/Spinner";
+import showpass from "../../images/icons/showpass.png"
 
 type FormDataT = {
    email: string
    password: string
    rememberMe: boolean
+   showPass: boolean
 }
 
 export const Login = () => {
+
+   const [passwordShown, setPasswordShown] = useState<boolean>(false);
+   const togglePasswordVisiblity = () => {
+      setPasswordShown(passwordShown ? false : true);
+   };
+
    const authStatus = useAppSelector<authStatuses>(state => state.auth.authStatus)
    const loading = useAppSelector<boolean>(state => state.app.loading)
 
@@ -40,13 +48,16 @@ export const Login = () => {
       defaultValues: {
          email: '',
          password: '',
-         rememberMe: true
+         rememberMe: true,
+         showPass: true,
       }
    })
 
    const onSubmit: SubmitHandler<FormDataT> = async (data) => dispatch(loginUserData(data))
 
    if (authStatus === authStatuses.SUCCEEDED) return <Navigate to={PATH.PROFILE}/>
+
+
 
    return (
       <>
@@ -72,10 +83,17 @@ export const Login = () => {
                   <div className={styles.inputWrap}>
                      {!!errors.password && <div className={styles.errorMes}>{errors.password.message}</div>}
                      <Input
-                        type={'password'}
+                         type={passwordShown ? "text" : "password"}
                         label={'Password'}
                         autoComplete={'on'}
                         {...register("password", {required: true})}/>
+                     <i>
+                        <img src={showpass} alt="Show password"
+                             onClick={togglePasswordVisiblity}
+                              width="20"
+                              height= "20"
+                        />
+                     </i>
                   </div>
                </div>
 

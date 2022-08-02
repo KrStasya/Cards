@@ -71,16 +71,45 @@
 
 .inputGroup {
   margin-bottom: 20px;
+
 }
 
 .inputWrap {
   position: relative;
 
   &:first-child {
-
     margin-bottom: 40px;
   }
+
+  i {
+    position: absolute;
+    top: 38%;
+    right: 10%;
+
+    //&::after {
+    //  position: absolute;
+    //  content: "";
+    //  top: 10px;
+    //  left: 0px;
+    //  width: 20px;
+    //  height: 1px;
+    //  background: black;
+    //  transform: rotate(45deg);
+    //  transition: .3s all ease;
+    //  opacity: 1;
+    //}
+  }
+  i:active {
+    &::after{
+      opacity: 0;
+    }
+  }
+  i:hover {
+    cursor: pointer;
+  }
+
 }
+
 
 .linkSing {
   position: relative;
@@ -330,7 +359,7 @@
     &:after {
       content: '';
       position: absolute;
-     // background: url("../images/icons/checked.png") 0 0/contain no-repeat;;
+      //background: black; //url("../images/icons/checked.png") 0 0/contain no-repeat;;
       top: 50%;
       left: 50%;
       width: 80%;
